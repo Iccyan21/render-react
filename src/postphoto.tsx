@@ -16,6 +16,7 @@ const PostDetailComponent = () => {
         axios.get(`https://django-d0bm.onrender.com/post/post-photo/${title}/`)
             .then(response => {
                 setPost(response.data);
+                console.log(response.data);
             })
             .catch(error => console.error('Error:', error));
     }, [title]);
