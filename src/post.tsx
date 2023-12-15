@@ -11,7 +11,7 @@ const Posts = () => {
     const [posts, setPosts] = useState<Post[]>([]);
 
     useEffect(() => {
-        axios.get('https://django-5mwz.onrender.com/post/')
+        axios.get('https://django-0c6w.onrender.com/post/')
             .then(response => {
                 setPosts(response.data);
                 console.log(response.data);

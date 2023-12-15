@@ -15,7 +15,7 @@ const PostDetail = () => {
     const { title } = useParams<{ title: string }>(); // URLからtitleパラメータを取得
 
     useEffect(() => {
-        axios.get(`https://django-5mwz.onrender.com/post/${title}/`)
+        axios.get(`https://django-0c6w.onrender.com/post/${title}/`)
             .then(response => {
                 setPost(response.data);
                 console.log(response.data);
@@ -32,9 +32,9 @@ const PostDetail = () => {
     return (
         <div>
             <h2>{post.title}</h2>
-            <img src={`https://django-5mwz.onrender.com${post.photo}`} alt={post.title} style={{ maxWidth: '300px' }} />
+            <img src={`https://django-0c6w.onrender.com${post.photo}`} alt={post.title} style={{ maxWidth: '300px' }} />
             <video controls style={{ maxWidth: '300px' }}>
-                <source src={`https://django-5mwz.onrender.com${post.video}`} type="video/mp4" />
+                <source src={`https://django-0c6w.onrender.com${post.video}`} type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
         </div>

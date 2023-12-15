@@ -13,7 +13,7 @@ const PostDetailComponent = () => {
     const { title } = useParams<{ title: string }>();
 
     useEffect(() => {
-        axios.get(`https://django-5mwz.onrender.com/post/post-photo/${title}/`)
+        axios.get(`https://django-0c6w.onrender.com/post/post-photo/${title}/`)
             .then(response => {
                 setPost(response.data);
                 console.log(response.data);
@@ -28,12 +28,12 @@ const PostDetailComponent = () => {
     return (
         <div>
             <h2>{post.title}</h2>
-            <img src={`https://django-5mwz.onrender.com${post.photo}`} alt={post.title} style={{ maxWidth: '300px' }} />
+            <img src={`https://django-0c6w.onrender.com${post.photo}`} alt={post.title} style={{ maxWidth: '300px' }} />
             {post.movies.map((movie, index) => (
                 <div key={index}>
                     <h3>{movie.title}</h3>
                     <video controls style={{ maxWidth: '300px' }}>
-                        <source src={`https://django-5mwz.onrender.com${movie.video}`} type="video/mp4" />
+                        <source src={`https://django-0c6w.onrender.com${movie.video}`} type="video/mp4" />
                     </video>
                 </div>
             ))}
